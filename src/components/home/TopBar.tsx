@@ -5,7 +5,7 @@ import "./style.css";
 const TopBar = () => {
   return (
     <div
-      className="absolute mt-4 mx-4 left-0 right-0 rounded-2xl top-0 flex flex-row items-center space-x-2 justify-evenly min-h-16 py-2 px-2"
+      className=" mt-4 mx-4 rounded-2xl flex flex-row items-center space-x-2 justify-evenly min-h-16 py-2 px-2"
       id="topbar"
     >
       {/* circular ring */}

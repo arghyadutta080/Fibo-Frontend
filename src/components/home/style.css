@@ -7,3 +7,7 @@
     background: rgb(186, 217, 252);
     background: radial-gradient(circle, rgba(14, 119, 217, 1) 5%, rgba(14, 119, 217, 1) 5%, rgba(186, 217, 252) 100%);
 }
+
+*:focus {
+    outline: none;
+}

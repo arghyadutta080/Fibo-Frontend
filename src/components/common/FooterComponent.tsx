@@ -3,11 +3,12 @@ import { Footer, FooterLinkGroup } from "flowbite-react";
 import { FooterRoutes } from "@/utils/constants/FooterRoutes";
 import Link from "next/link";
 
+
 const FooterComponent: React.FC = () => {
   return (
     <Footer
       container
-      className=" bg-[#242424] bottom-0 absolute py-3 rounded-none mb-0"
+      className="bg-[#282828] bottom-0 absolute py-3 rounded-none mb-0"
     >
       <FooterLinkGroup className="flex justify-between">
         {FooterRoutes.map((route, index) => (
