@@ -8,7 +8,7 @@ const FooterComponent: React.FC = () => {
   return (
     <Footer
       container
-      className="bg-[#282828] bottom-0 absolute py-3 rounded-none mb-0"
+      className="bg-[#282828] bottom-0 z-10 sticky py-3 rounded-none mb-0"
     >
       <FooterLinkGroup className="flex justify-between">
         {FooterRoutes.map((route, index) => (
