@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import React from 'react'
+import React from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -9,12 +9,11 @@ import {
   Title,
   Tooltip,
   Legend,
-  scales,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { useSelector } from 'react-redux';
-import { goalCompletion } from '@/lib/redux/features/goalCounter/goalCounterSlice';
-import { getWeekDates } from '@/utils/constants/functions/getWeekDates';
+import { useSelector } from "react-redux";
+import { goalCompletion } from "@/lib/redux/features/goalCounter/goalCounterSlice";
+import { getWeekDates } from "@/utils/constants/functions/getWeekDates";
 
 ChartJS.register(
   CategoryScale,
@@ -24,8 +23,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
-
 
 const BarDiagram = () => {
   const percentage = useSelector(goalCompletion);
@@ -46,7 +43,7 @@ const BarDiagram = () => {
       },
     },
   };
-  
+
   const labels = getWeekDates();
   // console.log(labels);
 
@@ -59,8 +56,14 @@ const BarDiagram = () => {
       },
     ],
   };
-  
-  return <Bar options={options} data={data} className='my-10'/>;
-}
 
-export default BarDiagram
+  return (
+    <Bar
+      options={options}
+      data={data}
+      className="my-10 rounded-xl bg-[#282828] mx-4 left-0 right-0 p-2"
+    />
+  );
+};
+
+export default BarDiagram;
