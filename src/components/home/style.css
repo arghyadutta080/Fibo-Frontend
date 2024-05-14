@@ -23,12 +23,26 @@
     font-weight: bold;
 }
 
-/* .ReactSwipeButton .rsbContainer .rsbcSlider .rsbcSliderCircle{
-    background: #fff;
-    margin: 3px;
-} */
-
 .wrapper .rsbContainerUnlocked .rsbcSlider {
     background: #fff;
-    padding: 4px;
+    margin: 4px;
+}
+
+.wrapper .rsbContainer .rsbContainerUnlocked .rsbcSlider .rsbcSliderText {
+    font-size: 15px;
+    color: #D15439;
+    font-weight: bold;
+}
+
+.wrapper .rsbContainer .rsbcSlider .rsbcSliderArrow {
+    border-right: 3px solid #D15439;
+    border-top: 3px solid #D15439;
+    height: 10px;
+    width: 10px;
+}
+
+.wrapper .rsbContainer .rsbcSText {
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
 }
