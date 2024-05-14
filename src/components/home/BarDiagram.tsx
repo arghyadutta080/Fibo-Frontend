@@ -13,7 +13,7 @@ import {
 import { Bar } from "react-chartjs-2";
 import { useSelector } from "react-redux";
 import { goalCompletion } from "@/lib/redux/features/goalCounter/goalCounterSlice";
-import { getWeekDates } from "@/utils/constants/functions/getWeekDates";
+import { getWeekDates } from "@/utils/functions/getWeekDates";
 
 ChartJS.register(
   CategoryScale,

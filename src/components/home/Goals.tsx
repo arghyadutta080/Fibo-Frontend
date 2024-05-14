@@ -24,6 +24,7 @@ const Goals = () => {
           height={50}
           width={54}
           className="h-12 w-14"
+          priority={false}
         />
       </div>
 
