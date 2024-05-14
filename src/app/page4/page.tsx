@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const page = () => {
   return (
-    <div>page4</div>
-  )
-}
+    <div className="min-h-screen flex items-center justify-center text-white text-xl">
+      page4
+    </div>
+  );
+};
 
-export default page
+export default page;
