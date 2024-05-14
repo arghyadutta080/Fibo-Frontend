@@ -7,7 +7,6 @@ import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/lib/redux/store";
 import { addGoal, deleteGoal } from "@/lib/redux/features/goalCounter/goalCounterSlice";
-import { set } from "mongoose";
 
 interface Props {
   goal: Goal;
@@ -22,10 +21,10 @@ const GoalItem: React.FC<Props> = ({ goal, allState }) => {
 
   const trackGoal = () => {
     if (checked) {
-      console.log(checked, goal.id);
+      // console.log(checked, goal.id);
       dispatch(addGoal(goal));
     } else {
-      console.log(checked, goal.id);
+      // console.log(checked, goal.id);
       dispatch(deleteGoal(goal.id));
     }
   }
@@ -33,10 +32,10 @@ const GoalItem: React.FC<Props> = ({ goal, allState }) => {
   const trackAllGoal = () => {
     if (allState) {
       setChecked(true);
-      console.log(allState, goal.id);
+      // console.log(allState, goal.id);
     } else {
       setChecked(false);
-      console.log(allState, goal.id);
+      // console.log(allState, goal.id);
     }
   }
 

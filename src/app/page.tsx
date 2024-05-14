@@ -5,9 +5,9 @@ import TopBar from "@/components/home/TopBar";
 export default function Home() {
   return (
     <>
-    <TopBar />
-    <Goals />
-    <BarDiagram/>
+      <TopBar />
+      <Goals />
+      <BarDiagram />
     </>
   );
 }

@@ -3,7 +3,6 @@ import { Footer, FooterLinkGroup } from "flowbite-react";
 import { FooterRoutes } from "@/utils/constants/FooterRoutes";
 import Link from "next/link";
 
-
 const FooterComponent: React.FC = () => {
   return (
     <Footer

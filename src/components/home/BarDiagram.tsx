@@ -15,7 +15,6 @@ import { Bar } from "react-chartjs-2";
 import { useSelector } from 'react-redux';
 import { goalCompletion } from '@/lib/redux/features/goalCounter/goalCounterSlice';
 import { getWeekDates } from '@/utils/constants/functions/getWeekDates';
-// import faker from "faker";
 
 ChartJS.register(
   CategoryScale,
@@ -49,7 +48,7 @@ const BarDiagram = () => {
   };
   
   const labels = getWeekDates();
-  console.log(labels);
+  // console.log(labels);
 
   const data = {
     labels,

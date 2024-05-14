@@ -9,7 +9,7 @@ export const getWeekDates = () => {
 
     for (let i = 1; i <= 7; i++) {
         const newDate = new Date(today);
-        newDate.setDate(today.getDate() + i); // Add i days to today's date
+        newDate.setDate(today.getDate() + i); 
 
         const newDd = String(newDate.getDate()).padStart(2, '0');
         const newMm = String(newDate.getMonth() + 1).padStart(2, '0');
