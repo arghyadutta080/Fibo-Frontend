@@ -51,6 +51,7 @@ const BarDiagram = () => {
     labels,
     datasets: [
       {
+        label: 'Percentage of Goal Completion',
         data: [percentage],
         backgroundColor: "#5A92CB",
       },

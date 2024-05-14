@@ -55,16 +55,16 @@ const GoalItem: React.FC<Props> = ({ goal, allState }) => {
         <div className={`bg-[#3D3D3D] rounded-xl text-${goal.icon_color} p-2`}>
           <Image
             src={goal.icon}
-            width={50}
-            height={50}
-            className="h-8 w-8"
+            width={100}
+            height={100}
+            className="h-5 w-5"
             alt="_goal_icon"
           />
         </div>
         <span className="text-white text-base font-medium">{goal.desc}</span>
       </div>
       <input
-        className={`h-10 w-10 rounded-xl cursor-pointer`}
+        className={`h-8 w-8 rounded-xl cursor-pointer`}
         style={{ backgroundColor: `${goal.icon_color}` }}
         type="checkbox"
         checked={checked}
