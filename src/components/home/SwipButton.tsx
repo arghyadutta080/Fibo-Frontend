@@ -11,7 +11,8 @@ const SwipButton = () => {
         onSuccess={onSuccess} //callback function
         text="Swipe to track all" //string
         text_unlocked="All task done!" //string
-        color="#16362d" //css hex color
+        color="#ffff" //css hex color
+        
       />
     </div>
   );

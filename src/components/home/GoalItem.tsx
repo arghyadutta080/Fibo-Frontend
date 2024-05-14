@@ -7,12 +7,14 @@ import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/lib/redux/store";
 import { addGoal, deleteGoal } from "@/lib/redux/features/goalCounter/goalCounterSlice";
+import { set } from "mongoose";
 
 interface Props {
   goal: Goal;
+  allState: boolean;
 }
 
-const GoalItem: React.FC<Props> = ({ goal }) => {
+const GoalItem: React.FC<Props> = ({ goal, allState }) => {
   const goals = useSelector((state: RootState) => state.counter.goals);
   const dispatch = useDispatch();
 
@@ -28,15 +30,23 @@ const GoalItem: React.FC<Props> = ({ goal }) => {
     }
   }
 
+  const trackAllGoal = () => {
+    if (allState) {
+      setChecked(true);
+      console.log(allState, goal.id);
+    } else {
+      setChecked(false);
+      console.log(allState, goal.id);
+    }
+  }
+
+  useEffect(() => {
+    trackAllGoal();
+  }, [allState]);
+
   useEffect(() => {
     trackGoal();
   }, [checked]);
-
-  // useEffect(() => {
-  //   if (goals.find((g) => g.id === goal.id)) {
-  //     setChecked(true);
-  //   }
-  // }, []);
 
   console.log(goals);
 
