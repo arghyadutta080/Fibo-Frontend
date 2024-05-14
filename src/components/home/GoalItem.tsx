@@ -1,16 +1,45 @@
 "use client";
 
-import React, { useState } from "react";
-import { Goal } from "../lib/types/goal";
+import React, { useEffect, useState } from "react";
+import { Goal } from "../../lib/types/goal";
 import Image from "next/image";
-import "./style.css"
+import "./style.css";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/lib/redux/store";
+import { addGoal, deleteGoal } from "@/lib/redux/features/goalCounter/goalCounterSlice";
 
 interface Props {
-    goal: Goal;
-    }
+  goal: Goal;
+}
 
-const GoalItem: React.FC<Props> = ({goal}) => {
+const GoalItem: React.FC<Props> = ({ goal }) => {
+  const goals = useSelector((state: RootState) => state.counter.goals);
+  const dispatch = useDispatch();
+
   const [checked, setChecked] = useState(false);
+
+  const trackGoal = () => {
+    if (checked) {
+      console.log(checked, goal.id);
+      dispatch(addGoal(goal));
+    } else {
+      console.log(checked, goal.id);
+      dispatch(deleteGoal(goal.id));
+    }
+  }
+
+  useEffect(() => {
+    trackGoal();
+  }, [checked]);
+
+  // useEffect(() => {
+  //   if (goals.find((g) => g.id === goal.id)) {
+  //     setChecked(true);
+  //   }
+  // }, []);
+
+  console.log(goals);
+
   return (
     <div className="bg-[#282828] flex flex-row p-4 justify-between items-center mx-2 rounded-xl">
       <div className="flex flex-row justify-start items-center space-x-4">
@@ -27,12 +56,11 @@ const GoalItem: React.FC<Props> = ({goal}) => {
       </div>
       <input
         className={`h-10 w-10 rounded-xl cursor-pointer`}
-        style={{ backgroundColor: `${goal.icon_color}`,  }}
+        style={{ backgroundColor: `${goal.icon_color}` }}
         type="checkbox"
         checked={checked}
         onClick={() => {
           setChecked(!checked);
-          console.log(checked, goal.id);
         }}
       />
     </div>

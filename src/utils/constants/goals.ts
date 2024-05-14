@@ -1,4 +1,4 @@
-import { Goal } from "@/components/lib/types/goal";
+import { Goal } from "@/lib/types/goal";
 
 export const goals: Goal[] = [
     {
@@ -6,7 +6,7 @@ export const goals: Goal[] = [
         icon: '/assets/home/exercise.png',
         desc: 'Workout for 20 mins',
         icon_color: '#9E4CB8'
-    }, 
+    },
     {
         id: 2,
         icon: '/assets/home/read_book.png',
@@ -22,7 +22,7 @@ export const goals: Goal[] = [
     {
         id: 4,
         icon: '/assets/home/sleep.png',
-        desc: 'Sleep at 11 PM sharp', 
+        desc: 'Sleep at 11 PM sharp',
         icon_color: '#63A7A7'
     },
     {
