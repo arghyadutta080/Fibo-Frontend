@@ -3,8 +3,11 @@
 import { goals } from "@/utils/constants/goals";
 import React, { useState } from "react";
 import GoalItem from "./GoalItem";
-import { SwipeableButton } from "react-swipeable-button";
+// import { SwipeableButton } from "react-swipeable-button";
 import Image from "next/image";
+import SwipeableButton from "./SwipeableButton";
+// import ReactSwipeButton from "react-swipe-button";
+
 
 const Goals = () => {
   const [allState, setAllState] = useState<boolean>(false);
@@ -37,11 +40,16 @@ const Goals = () => {
 
       {/* swip button */}
       <div className="left-0 right-0 mx-4 wrapper my-4 h-8">
-        <SwipeableButton
+        {/* <SwipeableButton
           onSuccess={onSuccess}
           text="Swipe to track all"
           text_unlocked="All task done!"
           color="#ffff"
+        /> */}
+        <SwipeableButton
+          onSuccess={onSuccess}
+          color="#6ab04c"
+          text="SLIDE TO UNLOCK"
         />
       </div>
     </div>
