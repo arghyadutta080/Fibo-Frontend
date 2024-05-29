@@ -20,8 +20,8 @@
     "react-dom": "^18",
     "react-icons": "^5.2.1",
     "react-redux": "^9.1.2",
-    "react-swipe-button": "^1.0.1",
-    "react-swipeable-button": "^1.0.9"
+    "react-swipeable-button": "^1.0.9",
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@types/node": "^20",
